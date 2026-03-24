@@ -1,0 +1,228 @@
+@layer font {
+  @font-face {
+    font-family: "BaiJamjuree";
+    src: url("./font/BaiJamjuree-Regular.ttf");
+  }
+}
+@layer variables {
+  :root {
+    /*colors*/
+    --green-500: hsl(171, 66%, 44%);
+    --blue-100: hsl(233, 100%, 69%);
+    --gray-700: hsl(210, 10%, 33%);
+    --gray-500: hsl(201, 11%, 66%);
+
+    /*font weight*/
+    --fw-400: 400;
+    --fw-600: 600;
+
+    /*font size*/
+    --fs-body: 1.125rem;
+    --fs-reg: 1rem;
+    --fs-sm: 0.725rem;
+  }
+}
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+@layer main {
+  body {
+    font-family: "BaiJamjuree";
+    background: url("./images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-wrap: balance;
+    font-size: var(--fs-reg);
+    color: var(--gray-700);
+
+    display: grid;
+    height: 150vh;
+    gap: 3rem;
+  }
+  img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+  main {
+    max-width: 100%;
+    padding: 2rem;
+    display: grid;
+    gap: 9rem;
+  }
+  header {
+    padding: 6rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer {
+    background-color: hsl(200, 9%, 94%);
+    margin-top: 5rem;
+    padding: 4rem 0 2rem 0;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  section {
+    text-align: center;
+  }
+  h1,
+  h2,
+  h3 {
+    color: var(--gray-700);
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  p {
+    color: var(--gray-500);
+    line-height: 1.5;
+  }
+  .columns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    padding-top: 4rem;
+  }
+  .column {
+    display: grid;
+    padding-top: 4rem;
+  }
+  .buttons {
+    display: flex;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .btn {
+    display: inline-block;
+    padding: 1rem;
+    color: white;
+    border-radius: 1.6rem;
+    font-family: "BaiJamjuree";
+    font-size: var(--fs-reg);
+    font-weight: var(--fw-600);
+    letter-spacing: 2px;
+    border: none;
+    border-bottom: 1px solid var(--gray-500);
+  }
+  .green-btn {
+    background-color: var(--green-500);
+    box-shadow:
+      0 0 5px var(--green-500),
+      0 0 5px var(--green-500);
+  }
+  .blue-btn {
+    background-color: var(--blue-100);
+  }
+}
+@layer styles {
+  .hero {
+    color: var(--gray-500);
+    margin-bottom: 3rem;
+  }
+  .hero h1 {
+    color: var(--gray-700);
+    font-weight: var(--fw-600);
+    padding-bottom: 20px;
+  }
+  .features-section h2 {
+    padding: 0 0 1rem 0;
+  }
+  .features-section p {
+    padding: 0 0 3rem 0;
+  }
+  .features-section img {
+    padding: 1rem 0 3rem 0;
+  }
+  .devices-section p {
+    padding: 1rem 0 4em 0;
+  }
+  .workflow-section {
+    text-align: center;
+  }
+  .workflow-section h2 {
+    padding: 0 0 1rem 0;
+  }
+  .workflow-section img {
+    max-width: 15%;
+  }
+  .workflow-section .s-bigger {
+    max-width: 15%;
+  }
+  .sponsor img {
+    max-width: 38%;
+  }
+  .sponsor .b {
+    max-width: 48%;
+  }
+  .cta h2 {
+    padding: 0 0 1rem 0;
+  }
+  .cta p {
+    margin-bottom: 1rem;
+  }
+  footer img {
+    max-width: 50%;
+  }
+  footer ul {
+    list-style: none;
+  }
+  footer li {
+    margin-bottom: 20px;
+  }
+  footer li:nth-child(5) {
+    margin-bottom: 0;
+  }
+  .icons {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  .icons img {
+    max-width: 20%;
+  }
+}
+
+@layer layout {
+  @media (width > 960px) {
+    .hero {
+      padding: 0;
+    }
+    .columns {
+      flex-direction: row;
+    }
+    .column {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .buttons {
+      flex-direction: row;
+    }
+    .unset {
+      text-align: start;
+    }
+    .devices-section img {
+      max-width: 70%;
+    }
+  }
+}
