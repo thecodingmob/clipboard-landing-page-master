@@ -82,6 +82,15 @@
   h3 {
     color: var(--gray-700);
   }
+  h1 {
+    font-size: 2.4rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 1.6rem;
+  }
   p {
     color: var(--gray-500);
     line-height: 1.5;
@@ -221,15 +230,6 @@
       background: url("./images/bg-header-desktop.png");
       background-repeat: no-repeat;
       background-size: 100%;
-    }
-    h1 {
-      font-size: 2.4rem;
-    }
-    h2 {
-      font-size: 2.2rem;
-    }
-    h3 {
-      font-size: 1.6rem;
     }
     .hero {
       padding: 0;
